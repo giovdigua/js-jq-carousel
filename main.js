@@ -63,4 +63,12 @@ $(document).ready(function() {
 
     });
 
+    $('.bullet').click(function () {
+            $('.bullet.select').removeClass('select');
+            $(this).addClass('select');
+            var indice = $(this).index();
+            console.log(indice);
+            $('img.active').removeClass('active');
+            $('#sliderIMGContainer').children().eq(indice).addClass('active');
+    })
 });
